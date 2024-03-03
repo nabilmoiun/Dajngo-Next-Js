@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --primary: rgb(39, 39, 134);
+    --dark: rgb(31 41 55 1);
+    --secondary: rgba(243, 244, 246, 0.948);
+    --danger: rgba(196, 73, 73, 0.948);
+}
+
+.wrapper {
+    padding: 60px 20px 60px 20px;
+}
+
+.heading {
+    font-weight: 600;
+    width: max-content;
+    position: relative;
+    margin-top: 16px;
+    margin-bottom: 32px;
+}
+
+.heading::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: var(--primary);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    left: 0;
+    right: 0;
+}
+
+.text-dark {
+    color: var(--dark);
+}
+
+.text-primary {
+    color: var(--primary);
+}
+
+.bg-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.bg-danger {
+    background: var(--danger);
+    color: white;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.table {
+    box-sizing: border-box;
+    padding: 16px;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: start;
+    overflow: scroll;
+}
+
+.table th {
+    padding: 16px;
+    background: rgb(39, 39, 134, .9);
+    color: white;
+}
+
+.table td {
+    padding: 16px;
+    color: var(--dark);
+    border-bottom: 1px solid black;
+    border-color: rgba(208, 202, 202, 0.835);
+}
+
+.table th {
+    text-align: start;
+}
+
+.table tbody tr:hover {
+    background: rgb(235 235 235 / 84%);
+    color: var(--dark);
+
+}
+
+.form-nxt {
+    background: var(--secondary);
+    padding: 30px;
+    border: 1px solid var(--secondary);
+    border-radius: 1%;
+    color: var(--dark);
+}
+
+.form-nxt__input {
+    width: 100%;
+    padding: 10px;
+    border: var(--primary);
+    border-color: var(--primary);
+
+}
+
+.form-nxt__input:focus {
+    border: var(--primary);
+    border-color: var(--primary);
+    outline: 1px solid var(--primary);
+
+}
+
+.btn {
+    padding: 10px 25px 10px 25px;
+    text-align: center;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-danger {
+    background: var(--danger);
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .table {
+        font-size: 10px;
+        overflow-wrap: normal;
+    }
+    .table img {
+        width: 64px;
+        height: 32px;
+    }
+}
+
